@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, ''),
         filename: 'main_bundle.js'
     },
     module: {
@@ -13,6 +13,7 @@ module.exports = {
             {
                 test: /\.(js)$/,
                 // test: /\.m?js$/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
