@@ -1,0 +1,16 @@
+@import '../../../styles/scss/colors.scss';
+
+.snack-bar {
+    position: relative;
+
+    &__arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid $ocean-40;
+        position: absolute;
+        right: 50px;
+        bottom: -19px;
+    }
+}

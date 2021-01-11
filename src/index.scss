@@ -1,0 +1,66 @@
+@import './styles/scss/colors.scss';
+
+body {
+    margin: 0;
+}
+
+.main-app {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a,
+article,
+body,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+legend,
+li,
+main,
+ol,
+p,
+pre,
+section,
+table,
+td,
+textarea,
+th,
+tr,
+ul,
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='text'],
+[type='url'],
+.border-box {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+
+::selection {
+  background-color: $ocean-20;
+  color: $white;
+}
+
+img {
+  max-width: 100%;
+}
