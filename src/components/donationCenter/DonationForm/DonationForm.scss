@@ -75,6 +75,23 @@
             color: white; 
             background-color: #2bcca3; 
             transform: translateX(2px); 
-        } 
+        }
+        &.has-error {
+            border-color: red;
+        }
+        &.has-success {
+            border-color: green;
+        }
+    }
+
+    &__error {
+        color: red;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin: 0;
+    }
+    &__success {
+        color: green;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin: 0;
     }
 }
