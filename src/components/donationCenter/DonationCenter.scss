@@ -1,20 +1,18 @@
 @import '../../styles/scss/colors.scss';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import '../../styles/scss/breakpoints.scss';
+
 .donation-container {
-    background: $ocean-20;
     height: 100vh;
-    padding: 15px;
+    padding: 50px 15px;
 
     &__snack-bar {
         background: $ocean-40;
-        width: 100%;
-        height: 50px;
+        height: 20px;
         padding: 10px;
         border-radius: 4px;
         display: flex;
         align-items: center;
-        color: $mint-60;
+        color: $ocean-80;
         font-family: 'IBM Plex Sans', sans-serif;
     }
     &__currency {
@@ -22,6 +20,25 @@
     }
 
     &__description {
-        color: $slate-80;
+        color: $slate;
     }
+
+    @media #{$breakpoint-sm} {
+        padding: 100px 15px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    @media #{$breakpoint-md} {
+        width: 50%;
+    }
+
+    @media #{$breakpoint-lg} {
+        width: 40%;
+    }
+    
+    @media #{$breakpoint-xl} {
+        width: 30%;
+    }
+
 }

@@ -13,12 +13,10 @@ const DonationForm = ({handleClick, totalDonors, totalAmountDonated, totalGoal})
     const changeHandler = (event) => {
         if (isAllNumberic(event.target.value) || !event.target.value) {
             setFormData({...formData, donationAmount: event.target.value})
-            // setDonationAmount(event.target.value);
         }
     }
     const handleSubmit = () => {
         if (parseInt(formData.donationAmount) < 5) {
-            // setHasError(true);
             setFormData({
                 ...formData,
                 hasError: true,
@@ -33,7 +31,16 @@ const DonationForm = ({handleClick, totalDonors, totalAmountDonated, totalGoal})
                 isSubmitted: true
             });
         }
-    }
+    };
+    const getInputContainerClassName = () => {
+        let defaultClassName = 'donation-form__input-container';
+        if (formData.hasError && formData.isSubmitted) {
+            defaultClassName += ' has-error';
+        } else if (!formData.hasError && formData.isSubmitted) {
+            defaultClassName += ' has-success';
+        }
+        return defaultClassName;
+    };
     return (
         <div className="donation-form">
             <CardContainer className="donation-form__card">
@@ -54,11 +61,11 @@ const DonationForm = ({handleClick, totalDonors, totalAmountDonated, totalGoal})
                 }
                 { !formData.hasError && formData.isSubmitted && (
                     <p className="donation-form__success">
-                        Thank You very much for your donation.
+                        Thank you very much for your donation.
                     </p>
                 )
                 }
-                <div className={`donation-form__input-container ${formData.hasError && formData.isSubmitted ? 'has-error' : 'has-success'}`}>
+                <div className={getInputContainerClassName()}>
                     <div className="donation-form__input-currency-symbol">$</div>
                     <input className="donation-form_input-field" value={formData.donationAmount} name="donationAmountField" onChange={changeHandler}/>
                     <button className="donation-form__submit" onClick={handleSubmit}>Give Now</button>

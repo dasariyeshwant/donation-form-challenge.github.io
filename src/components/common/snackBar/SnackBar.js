@@ -1,5 +1,6 @@
 import React from 'react';
 import './snackBar.scss';
+
 const SnackBar = ({
     children,
     className
