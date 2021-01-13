@@ -6,14 +6,18 @@ import DonationForm from './DonationForm/DonationForm';
 import { formatCurrency } from '../../utils/Utils';
 
 const DonationCenter = () => {
+
     const [totalDonors, setTotalDonors] = useState(11);
     const [totalAmountDonated, setTotalAmountDonated] = useState(3750);
+
     const totalGoal = 5000;
     const remainingAmount = totalGoal - totalAmountDonated;
+
     const handleDonations = (amount) => {
         setTotalAmountDonated(totalAmountDonated + parseInt(amount));
         setTotalDonors(totalDonors + 1);
     };
+
     return (
         <CardContainer className="donation-container">
             <SnackBar className="donation-container__snack-bar">

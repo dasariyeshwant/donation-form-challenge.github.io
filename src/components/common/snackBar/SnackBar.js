@@ -6,7 +6,7 @@ const SnackBar = ({
     className
 }) => {
     return (
-        <div className={`snack-bar ${className}`}>
+        <div className={`snack-bar ${className}`} role="alert">
             {children}
             <div className="snack-bar__arrow-down"></div>
         </div>
